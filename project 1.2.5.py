@@ -79,12 +79,22 @@ arlo.shape("turtle")
 
 #-----finish lines--------
 runfinish = t.Turtle()
+runfinish.speed(10)
 runfinish.hideturtle
 runfinish.color=("white")
 runfinish.pencolor("white")
 runfinish.penup()
 runfinish.setpos(-400, -250)
 runfinish.pendown()
+
+runfinish2 = t.Turtle()
+runfinish2.speed(10)
+runfinish2.hideturtle
+runfinish2.color=("white")
+runfinish2.pencolor("white")
+runfinish2.penup()
+runfinish2.setpos(400, -250)
+runfinish2.pendown()
 #-----game functions--------
 def go_up():
     runner.setheading(90)
@@ -104,8 +114,9 @@ def go_forward():
     y2 = -(y-4)   
     overlap = can.find_overlapping(x1,y1,x2,y2)
     print(overlap)
-    if len(overlap)>1:
+    if len(overlap)>2:
         runner.setpos(-450, 0)
+
         #runner.write(0,0,"COLLISION")
 def go_fast():
     runner.speed(10)    
@@ -181,6 +192,36 @@ runfinish.fd(550)
 runfinish.left(90)
 runfinish.fd(300)
 runfinish.hideturtle()
+
+runfinish2.pendown()
+runfinish2.fd(260)
+runfinish2.left(90)
+runfinish2.fd(550)
+runfinish2.left(90)
+runfinish2.fd(560)
+runfinish2.left(90)
+runfinish2.fd(550)
+runfinish2.left(90)
+runfinish2.fd(300)
+runfinish2.fd(260)
+runfinish2.left(90)
+runfinish2.fd(550)
+runfinish2.left(90)
+runfinish2.fd(560)
+runfinish2.left(90)
+runfinish2.fd(550)
+runfinish2.left(90)
+runfinish2.fd(300)
+runfinish2.fd(260)
+runfinish2.left(90)
+runfinish2.fd(550)
+runfinish2.left(90)
+runfinish2.fd(560)
+runfinish2.left(90)
+runfinish2.fd(550)
+runfinish2.left(90)
+runfinish2.fd(300)
+runfinish2.hideturtle()
 for i in range(1, wall+1):
     wall_length += path_width
     
